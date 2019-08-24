@@ -2,6 +2,19 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import { Form, Input, Icon, Button, notification } from 'antd';
 import { Checkbox } from 'antd';
+// import { fetchBankData } from './services';
+import { graphql, compose } from 'react-apollo';
+import { gql } from 'apollo-boost';
+
+const fetchBankData = gql`
+{
+    ProviderBank {
+      Account_Number
+      IFSC_Code
+      Account_Holder_Name
+    }
+  }
+`
 
 const Box = styled.div`
     box-shadow: 1px 1px 10px 3px lightgray;
@@ -9,6 +22,7 @@ const Box = styled.div`
     margin: 5%;
     padding: 2%;
 `
+
 const openSuccess = type => {
     notification[type]({
         message: 'Successfully verified.',
@@ -26,7 +40,9 @@ const openError = type => {
 };
 
 
-function Verification() {
+function Verification(props) {
+    console.log(" Props data = ", props.data.ProviderBank);
+
     const [otp, setOtp] = useState();
     const [uniqueID, setUniqueID] = useState();
     const [check, setCheck] = useState();
@@ -44,6 +60,7 @@ function Verification() {
     }
 
     return (
+
         <div>
             <center>
                 <Box>
@@ -54,9 +71,11 @@ function Verification() {
                         <Button onClick={handleSubmit} style={{ margin: '2%' }} htmlType="submit" type="primary"> Submit </Button>
                     </Form>
                 </Box>
+                <h3> Account details: <br /> </h3>
+
             </center>
         </div>
     )
 }
 
-export default Verification;
+export default graphql(fetchBankData)(Verification);
