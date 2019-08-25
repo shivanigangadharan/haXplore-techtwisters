@@ -6,15 +6,7 @@ import { Checkbox } from 'antd';
 import { graphql, compose } from 'react-apollo';
 import { gql } from 'apollo-boost';
 
-const fetchBankData = gql`
-{
-    ProviderBank {
-      Account_Number
-      IFSC_Code
-      Account_Holder_Name
-    }
-  }
-`
+
 
 const Box = styled.div`
     box-shadow: 1px 1px 10px 3px lightgray;
@@ -41,7 +33,6 @@ const openError = type => {
 
 
 function Verification(props) {
-    console.log(" Props data = ", props.data.ProviderBank);
 
     const [otp, setOtp] = useState();
     const [uniqueID, setUniqueID] = useState();
@@ -78,4 +69,4 @@ function Verification(props) {
     )
 }
 
-export default graphql(fetchBankData)(Verification);
+export default Verification;
