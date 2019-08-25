@@ -64,10 +64,14 @@ function Details(props) {
         })
         setClick("clicked");
         setUniqueId(num);
+        giveData();
     }
-
     var data = props.fetchBankData.ProviderBank;
-    console.log("DATA IS = ", data);
+
+    function giveData() {
+        console.log("our data = ", data);
+        return data;
+    }
     return (
         <div>
             <center>
