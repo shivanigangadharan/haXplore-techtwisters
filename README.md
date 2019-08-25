@@ -15,7 +15,16 @@ In the current fintech system, the financial data sharing is still done via user
 .In order to eliminate the risk of forging the document by the user/customers, avoid manual intervention and making data avaialble to loan lending firms, directly from sources,  we have come up with the solution named “DigiFinT”. 
 
 Our approach is to solve the bottleneck problem of data sharing and access in Fintech centre. In the application, the user seeking loan grants permission to the financial information seeker like NBFCs to access the right to user’s private information like bank statements, etc, directly from the user’s bank.
+
 - NBFCs, Banks, other loan lending firms directly asks the customer's bank for their bank statements with data shared with customer's consent, and there's a two-step verification involved to make user's data more secure.
+
+- This reduces paperwork, removes manual intervention by directly connecting data requesters to banks with users consent,
+  eliminates forgery detection part on the end of all the fintech firms, thereby changing the way the financial data is dealt with in all the fintech firms.
+  
+- Our system is focussed on transferring not just raw PDF, analysis of which is done manuall or via some tool to extract text out of it, it also detects and gives out data in JSON format as well.
+
+Considering the current system in fintech sector, introducing our data flow centered-solution can save a lot of time for all fintech firms, automating a lot of manual work and eliminating forgery and can allow these firms to handle data digitally and innovate more in other aspects in more efficient manner.
+
 
 
 **Target Audience**: FinTech Firms and Startups, Banks, NBFCs, account holders, Loan providers.
