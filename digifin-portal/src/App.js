@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Verification from './verification';
 import ApolloClient from 'apollo-boost';
 import { ApolloProvider, Query, Mutation } from 'react-apollo';
-import New from './new';
+import LandingPage from './landing-page';
 
 function App() {
   const client = new ApolloClient({
@@ -19,9 +19,9 @@ function App() {
       <div>
         <Router>
           <Switch>
-            <Route component={Details} exact path="/" />
+            <Route component={LandingPage} exact path="/" />
+            <Route component={Details} exact path="/details" />
             <Route component={Verification} path="/verification" />
-            <Route component={New} path="/reqs" />
           </Switch>
         </Router>
       </div>
