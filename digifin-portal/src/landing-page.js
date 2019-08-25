@@ -2,6 +2,10 @@ import Button from '@material-ui/core/Button';
 import React from 'react';
 import styled from 'styled-components';
 
+const Heading = styled.div`
+background-image: linear-gradient(to bottom right, red, yellow);
+`
+
 function LandingPage() {
     return (
         <div>

@@ -12,11 +12,12 @@ query{
   }
   `
 function New(props) {
+
+
     console.log("REQS ID = ", props.getReqsID.ProviderBank);
     return (
         <div>
             <h1> Your Reqs ID is: </h1>
-
         </div>
     )
 }
