@@ -62,7 +62,6 @@ function Verification(props) {
                         <Button onClick={handleSubmit} style={{ margin: '2%' }} htmlType="submit" type="primary"> Submit </Button>
                     </Form>
                 </Box>
-                <h3> Account details: <br /> </h3>
 
             </center>
         </div>

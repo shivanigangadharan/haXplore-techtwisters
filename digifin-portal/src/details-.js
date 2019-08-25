@@ -84,6 +84,9 @@ function Details(props) {
                         <Input onChange={e => { setBranch(e.target.value) }} style={{ margin: '1%', width: '70%', display: 'block' }} placeholder="Branch name" />
                         <Button onClick={HandleSubmit} style={{ margin: '2%' }} htmlType="submit" type="primary"> Submit </Button>
                     </Form>
+                    <Link to="/">
+                        <Button> Back </Button>
+                    </Link>
                 </Box>
                 <div hidden={click == "unclick" ? true : false}>
                     Your unique ID is : {uniqueID}
