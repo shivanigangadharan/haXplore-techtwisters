@@ -11,7 +11,7 @@ function App() {
   const client = new ApolloClient({
     uri: "https://digifin-portal.herokuapp.com/v1/graphql",
     headers: {
-      'x-hasura-admin-secret': 'madhunter'
+      'x-hasura-admin-secret': '*hidden for privacy reasons*'
     }
   });
   return (
