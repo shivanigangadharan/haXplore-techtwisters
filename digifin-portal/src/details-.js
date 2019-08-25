@@ -76,7 +76,7 @@ function Details(props) {
         <div>
             <center>
                 <Box>
-                    <Form action="/result">
+                    <Form action="http://localhost:5000/result", method="post">
                         <Input onChange={e => { setAcctName(e.target.value) }} style={{ margin: '1%', width: '70%', display: 'block' }} placeholder="Account holder name" />
                         <Input onChange={e => { setAcctNo(e.target.value) }} style={{ margin: '1%', width: '70%', display: 'block' }} placeholder="Account Number" />
                         <Input onChange={e => { setBank(e.target.value) }} style={{ margin: '1%', width: '70%', display: 'block' }} placeholder="Bank" />
